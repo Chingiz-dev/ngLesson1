@@ -1,0 +1,6 @@
+<p>good works!</p>
+<div *ngIf="isGood; else notGood"> I'm a good</div>
+<ng-template #notGood>
+  <div> I'm a not good</div>
+</ng-template>
+<button (click)="isGood = !isGood">Toggle</button>

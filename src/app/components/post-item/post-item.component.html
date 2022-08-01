@@ -1,0 +1,11 @@
+<!-- <div *ngIf="post?.status === 'published'" class="post-item"> -->
+<div [ngSwitch]="post.status" class="post-item">
+  <p *ngSwitchCase="'published'">Published</p>
+  <p *ngSwitchCase="'druft'">Druft</p>
+  <p *ngSwitchCase="'new'">New</p>
+  <p *ngSwitchDefault> default </p>
+  <h2 class="post-item__title">{{ post.title }}</h2>
+  <p class="post-item__text">{{ post.text }}</p>
+  <p class="post-item__author">{{ post.author }}</p>
+  <p class="post-item__date">{{ post.date }}</p>
+</div>
